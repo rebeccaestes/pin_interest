@@ -11,6 +11,13 @@
 <body>
 <h1>PinInterest</h1>
 
+<% if current_user %>
+     <h2><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h2>
+   <% else %>
+     <h2><%= link_to 'Signup', new_user_registration_path %></h2>
+     <h2><%= link_to 'Login', new_user_session_path %></h2>
+   <% end %>
+
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
 
