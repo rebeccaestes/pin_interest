@@ -1,11 +1,7 @@
-<h3>Welcome to All the PinInterest Pins!</h3><h3 class="button"><%= link_to 'Add a new pin', new_pin_path %></h3>
+<h3><%= link_to 'Add a new pin', new_pin_path %></h3>
 
 <% @pins.each do |pin| %>
-	<div class="pin"><%= link_to pin_path(pin) do %>
+	<%= link_to pin_path(pin) do %>
     	<%= image_tag pin.img_url, class: "pin_gallery" %><% end %>
-	<p><%= pin.title %></p></div>
-<% end %>
-
-<%= link_to root_path do %>
-    <%= image_tag "logo.jpg", width: 100 %>
+	<%= pin.title %>
 <% end %>

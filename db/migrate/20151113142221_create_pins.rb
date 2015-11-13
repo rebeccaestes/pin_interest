@@ -5,7 +5,7 @@ class CreatePins < ActiveRecord::Migration
       t.timestamps null: false
       t.string "img_url"
       t.string "title"
-      t.references "board"
+      t.references "user"
 
     end
   end
