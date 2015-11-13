@@ -1,4 +1,4 @@
-<p>Hello World</p>
+<h3><%= link_to 'Add a new pin', new_pin_path %></h3>
 
 <% @pins.each do |pin| %>
 	<a href="pins/<%= pin.id %>">

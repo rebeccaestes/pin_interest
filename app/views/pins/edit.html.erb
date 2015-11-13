@@ -2,4 +2,7 @@
 
 <%= render partial: "form" %>
 
-<% link_to 'Delete', pin_path(@pin), method: :delete, class: 'delete' %>
+
+<%= form_for @pin, method: :delete do |f| %>
+	<%= f.submit 'Delete!', class: 'delete' %>
+<% end %>
