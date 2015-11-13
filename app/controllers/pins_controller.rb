@@ -8,8 +8,12 @@ class PinsController < ApplicationController
 
 	def new
 		@board = Board.find(params[:board_id])
-		@user = current_user
+		@user = @board.user
 		@pin = Pin.new
+		if @user != current_user
+			flash[:alert] = "Access denied! You can't add a pin to someone else's board."
+			redirect_to board_path(@board)
+		end
 	end
 
 	def create
@@ -30,7 +34,7 @@ class PinsController < ApplicationController
 		@user = @board.user
 		if @user != current_user
 			flash[:alert] = "Access denied! You can't edit someone else's pin."
-			redirect_to root_path
+			redirect_to board_pin_path(@board, @pin)
 		end
 	end
 
