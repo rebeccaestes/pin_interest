@@ -1,0 +1,13 @@
+
+
+<%= form_for @pin do |f| %>
+	
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+
+	<%= f.label :'Image URL' %>
+	<%= f.text_field :img_url %>
+
+	<%= f.submit %>
+
+<% end %>

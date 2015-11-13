@@ -1,0 +1,7 @@
+<p>Hello World</p>
+
+<% @pins.each do |pin| %>
+	<a href="pins/<%= pin.id %>">
+	<img src=" <%= pin.img_url %>" class="pin_gallery"></a>
+	<%= pin.title %>
+<% end %>
