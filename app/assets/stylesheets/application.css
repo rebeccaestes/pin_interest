@@ -14,11 +14,36 @@
  *= require_self
  */
 
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  height: 50px;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+}
+
+h3 {
+  padding: 10px;
+}
+
 body {
 font-family: 'PT Sans', sans-serif;
   background: #B7DDE2;
-  margin-left: 200px;
-  margin-right: 200px;
+  /*margin-left: 200px;
+  margin-right: 200px;*/
   color: #274459;
   /*F1FFC9*/
 }

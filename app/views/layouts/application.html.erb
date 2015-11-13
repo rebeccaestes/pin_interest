@@ -9,13 +9,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>PinInterest</h1>
-
-<% if current_user %>
-     <h3><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
+<nav>
+  <h3><%= link_to 'PinInterest', pins_path %></h3>
+  <% if current_user %>
+    <h3><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
    <% else %>
      <h3><%= link_to 'Signup', new_user_registration_path %> * <%= link_to 'Login', new_user_session_path %></h3>
    <% end %>
+ </nav>
 
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
