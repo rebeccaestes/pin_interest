@@ -1,7 +1,11 @@
 <h3><%= link_to 'Add a new pin', new_pin_path %></h3>
 
 <% @pins.each do |pin| %>
-	<a href="pins/<%= pin.id %>">
-	<img src=" <%= pin.img_url %>" class="pin_gallery"></a>
+	<%= link_to pin_path(pin) do %>
+    	<%= image_tag pin.img_url, class: "pin_gallery" %><% end %>
 	<%= pin.title %>
+<% end %>
+
+<%= link_to root_path do %>
+    <%= image_tag "logo.jpg", width: 100 %>
 <% end %>
