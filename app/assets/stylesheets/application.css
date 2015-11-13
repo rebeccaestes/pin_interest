@@ -35,6 +35,26 @@ nav a {
   color: white;
 }
 
+nav a:hover {
+  color: blue;
+}
+.container {
+  margin: 20px;
+}
+.boardGallery a:hover {
+background-color: orange;
+
+}
+
+.boardGallery a {
+  text-decoration: none;
+  background-color: yellow;
+  margin: 20px;
+  padding: 40px;
+  display: block;
+  text-align: center;
+}
+
 h3 {
   padding: 10px;
 }
@@ -54,4 +74,22 @@ font-family: 'PT Sans', sans-serif;
 
 .pin_gallery {
 	width: 200px;
+}
+
+.delete {
+  background-color: red;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  color: white;
+  margin: 5px;
+}
+
+.enter {
+  background-color: blue;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  color: white;
+  margin: 5px;
 }
