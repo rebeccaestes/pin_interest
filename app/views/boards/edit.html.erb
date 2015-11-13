@@ -1,8 +1,8 @@
-<h2>Edit a Pin</h2>
+<h2>Edit a Board</h2>
 
 <%= render partial: "form" %>
 
 
-<%= form_for [@board, @pin], method: :delete do |f| %>
+<%= form_for @board, method: :delete do |f| %>
 	<%= f.submit 'Delete!', class: 'delete' %>
 <% end %>

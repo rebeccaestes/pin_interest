@@ -1,5 +1,4 @@
 <h2> <%= @pin.title %></h2>
-<h3><%= link_to 'Edit this', edit_pin_path(@pin)%></h3>
+<h3><%= link_to 'Edit this', edit_board_pin_path(@board, @pin)%></h3>
 
 <%= image_tag @pin.img_url, class: "pin_photo" %>
-
