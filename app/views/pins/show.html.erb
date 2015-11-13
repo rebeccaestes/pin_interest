@@ -1,7 +1,8 @@
-<h2> <%= @pin.title %></h2>
-<h3> a pin by <%= @board.user.email %></h3>
+<h2> Pin: <%= @pin.title %></h2>
 <% if @board.user == current_user %>
-<h3><%= link_to 'Edit this', edit_board_pin_path(@board, @pin)%></h3>
+<h3 class ="enter"><%= link_to 'Edit This Pin', edit_board_pin_path(@board, @pin)%></h3>
 <% end %>
+<h3> A pin by... <%= @board.user.email %></h3>
+
 
 <%= image_tag @pin.img_url, class: "pin_photo" %>

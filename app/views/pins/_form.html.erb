@@ -2,12 +2,12 @@
 
 <%= form_for [@board, @pin] do |f| %>
 
-	<%= f.label :title %>
-	<%= f.text_field :title %>
+	<p><%= f.label :title %>
+	<%= f.text_field :title %></p>
 
-	<%= f.label :'Image URL' %>
-	<%= f.text_field :img_url %>
+<p>	<%= f.label :'Image URL' %>
+	<%= f.text_field :img_url, class: 'field' %></p>
 
-	<%= f.submit %>
+	<%= f.submit 'Update', class: 'enter' %>
 
 <% end %>

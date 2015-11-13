@@ -1,13 +1,14 @@
 <h2> <%= @board.title %></h2>
-<h3>a pin by <%= @board.user.email %></h3>
 <% if @board.user == current_user %>
-	<h3><%= link_to 'Edit this', edit_board_path(@board)%></h3>
-	<h3><%= link_to 'Add a new pin', new_board_pin_path(@board) %></h3>
+	<p class ="enter"><%= link_to 'Change Board Title', edit_board_path(@board)%></h3>
+	<p class ="enter"><%= link_to 'Add a New Pin', new_board_pin_path(@board) %></h3>
 	<% else %>
 <% end %>
+<h3>A board by... <%= @board.user.email %></h3>
+
 
 <% @pins.each do |pin| %>
-	<%= link_to board_pin_path(@board, pin) do %>
+	<div class="pin"><%= link_to board_pin_path(@board, pin) do %>
     	<%= image_tag pin.img_url, class: "pin_gallery" %><% end %>
-	<%= pin.title %>
+	<p><%= pin.title %></p></div>
 <% end %>

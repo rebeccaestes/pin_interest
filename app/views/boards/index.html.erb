@@ -1,4 +1,4 @@
-<h3><%= link_to 'Add a new board', new_board_path %></h3>
+<h3 class="enter"><%= link_to 'Add a new board', new_board_path %></h3>
 
 <% @boards.each do |board| %>
 	<div class="boardGallery"><%= link_to "#{board.title}", board_path(board) %></div>
