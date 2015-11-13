@@ -13,6 +13,12 @@
  *= require_tree .
  *= require_self
  */
+/*Page Setup*/
+/* Colors
+Red: #A8003B
+cream: #FCF7D7
+grey: #CFCFCA
+*/
 
 * {
   margin: 0px;
@@ -36,23 +42,27 @@ nav a {
 }
 
 nav a:hover {
-  color: blue;
+  color: #A8003B;
 }
 .container {
   margin: 20px;
 }
 .boardGallery a:hover {
-background-color: orange;
+background-color: darkgrey;
 
 }
 
 .boardGallery a {
   text-decoration: none;
-  background-color: yellow;
+  background-color: #CFCFCA;
   margin: 20px;
   padding: 40px;
   display: block;
   text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #A8003B;
+  border-radius: 5px;
 }
 
 h3 {
@@ -61,7 +71,7 @@ h3 {
 
 body {
 font-family: 'PT Sans', sans-serif;
-  background: #B7DDE2;
+  background: #FCF7D7;
   /*margin-left: 200px;
   margin-right: 200px;*/
   color: #274459;
@@ -69,7 +79,7 @@ font-family: 'PT Sans', sans-serif;
 }
 
 .pin_photo {
-	width: 400px;
+	max-width: 400px;
 }
 
 .pin_gallery {
@@ -86,10 +96,45 @@ font-family: 'PT Sans', sans-serif;
 }
 
 .enter {
-  background-color: blue;
+  background-color: #A8003B;
   border: none;
   padding: 8px;
   border-radius: 5px;
   color: white;
   margin: 5px;
+  display: inline-block;
+}
+
+.enter a {
+  color: white;
+  text-decoration: none;
+}
+
+.pin {
+  height: 250px;
+  width: 200px;
+  background-color: #CFCFCA;
+  margin: 20px;
+  float: left;
+  border-radius: 5px;
+}
+
+.pin:hover {
+  font-weight: bold;
+  color: #274459;
+}
+
+.pin p {
+  padding: 5px;
+  color: #A8003B;
+
+}
+
+img {
+  border-radius: 5px 5px 0px 0px;
+  height: 200px;
+}
+
+.field {
+  width: 500px;
 }
