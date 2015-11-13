@@ -14,23 +14,24 @@ class PinsController < ApplicationController
 
 	def create
 		@user = current_user
-		@pin = Pin.create(pin_params.merge(user: @user))
+		@pin = Pin.create!(pin_params.merge(user: @user))
 		redirect_to pin_path(@pin)
 	end
 
 	def show
-		# @user = @pin.user
+		@user = @pin.user
 	end
 
 	def edit
 		@user = @pin.user
 		if @user != current_user
-			flash[:alert] = "Access denied! You can't edit someone else's post."
+			flash[:alert] = "Access denied! You can't edit someone else's pin."
 			redirect_to root_path
 		end
 	end
 
 	def update
+		@user = current_user
 		@pin.update(pin_params.merge(user: @user))
 		redirect_to pin_path(@pin)
 	end

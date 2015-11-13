@@ -6,7 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-pins = Pin.create(
-	[{ title: 'General Assembly'},
-	{ img_url: 'https://generalassemb.ly/online/assets/ga-lockup-logo-9d95d5d0a1c966540edaedcb440b1963.png'}
-	])
+# pins = Pin.create([
+# 	{ title: 'General Assembly' },
+# 	{ img_url: 'https://generalassemb.ly/online/assets/ga-lockup-logo-9d95d5d0a1c966540edaedcb440b1963.png' },
+# 	{ user_id: 1 }
+# 	])
